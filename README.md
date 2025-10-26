@@ -1,17 +1,17 @@
 <p align="center">
-  <a href="#">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" width="200" alt="HTML Project Logo">
+  <a href="https://laravel.com" target="_blank">
+    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="300" alt="Laravel Logo">
   </a>
 </p>
 
 <p align="center">
   <b>Inventory Management System — Midterm Project</b><br>
-  Built using HTML, CSS, JavaScript, and PHP
+  Built using Laravel Framework (PHP), MySQL, Blade Templates, and Bootstrap
 </p>
 
 <p align="center">
   <a href="#"><img src="https://img.shields.io/badge/Status-Completed-brightgreen"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Version-1.0-blue"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Laravel-11.x-red"></a>
   <a href="#"><img src="https://img.shields.io/badge/License-MIT-yellow"></a>
 </p>
 
@@ -19,30 +19,31 @@
 
 ## 📘 About the Project
 
-This project is part of our **Midterm Requirement** for the subject *Web Systems and Technologies*.  
-It demonstrates the use of HTML, CSS, JavaScript, and PHP to build a simple **Inventory Management System** with CRUD (Create, Read, Update, Delete) functionality.
+This project is part of our **Midterm Examination** for the subject *Web Systems and Technologies*.  
+It is a **Laravel-based Inventory Management System** designed to demonstrate CRUD functionality (Create, Read, Update, Delete) using Laravel’s MVC structure and Eloquent ORM.
 
-The system allows users to manage a list of items — adding, editing, and deleting entries, while maintaining clean UI and dynamic data handling.
+The system allows users to manage inventory records such as product name, quantity, and price — with data stored in a MySQL database.
 
 ---
 
 ## 🎯 Objectives
 
-- Apply core front-end technologies (HTML, CSS, JavaScript).
-- Use PHP for server-side scripting and data handling.
-- Demonstrate basic CRUD operations.
-- Practice Git and GitHub for version control and documentation.
-- Present professional Markdown documentation.
+- Demonstrate Laravel MVC architecture and routing.
+- Implement CRUD operations using Eloquent ORM.
+- Apply Blade templates for a responsive and dynamic UI.
+- Use Laravel Artisan commands for setup and migrations.
+- Practice Git and GitHub for collaboration and documentation.
 
 ---
 
 ## ⚙️ Features
 
-- 🟢 **Add Items** – Add new items with name, quantity, and price  
-- 🟡 **Edit Items** – Update existing inventory details  
-- 🔴 **Delete Items** – Remove items from the list  
-- 🔍 **View Inventory** – Display all stored items in a table  
-- 💾 **Save Data** – Use PHP and MySQL for persistent storage  
+- 🟢 **Add Items** – Add new inventory records.  
+- 🟡 **Edit Items** – Update existing products.  
+- 🔴 **Delete Items** – Remove products from the database.  
+- 🔍 **View Inventory** – Display all records dynamically.  
+- 💾 **Database Integration** – Data stored and managed via MySQL.  
+- 🧑‍💻 **Blade UI** – Clean and reusable HTML templating using Blade.
 
 ---
 
@@ -50,11 +51,12 @@ The system allows users to manage a list of items — adding, editing, and delet
 
 | Technology | Description |
 |-------------|-------------|
-| **HTML5** | Structure of the pages |
-| **CSS3** | Design and layout styling |
-| **JavaScript** | Interactivity and dynamic UI |
-| **PHP** | Backend logic and database connection |
-| **MySQL** | Data storage and management |
+| **Laravel 11** | PHP Framework for MVC structure |
+| **PHP 8.x** | Backend scripting |
+| **MySQL** | Relational database for data storage |
+| **Blade** | Laravel’s templating engine |
+| **Bootstrap 5** | Frontend styling and layout |
+| **Composer** | PHP dependency manager |
 
 ---
 
