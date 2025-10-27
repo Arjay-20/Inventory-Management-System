@@ -60,6 +60,81 @@ The system allows users to manage inventory records such as product name, quanti
 
 ---
 
+## 👥 Contributors
+| Name | Role | GitHub Branch |
+|------|------|----------------|
+| A. Patacsil | Developer / Documentation | APatacsil-Main |
+| C. Cabanela | Partner / Repository Owner | CCabanela-Main |
+
+## 🧭 Usage
+- Open the system in your browser after running `php artisan serve`.  
+- Click **“Add Item”** to create a new product entry.  
+- Use **“Edit”** to modify details of an existing item.  
+- Use **“Delete”** to remove an item from the inventory list.  
+- All updates automatically reflect in the MySQL database.  
+- Navigate between pages using the Laravel routes and Blade templates.
+
+## 🖼️ Screenshots / Code Snippets
+- this is from a controller
+    namespace App\Http\Controllers;
+
+    use App\Models\Category;
+    use Illuminate\Http\Request;
+- this is from the database
+    <?php
+
+    use Illuminate\Database\Migrations\Migration;
+    use Illuminate\Database\Schema\Blueprint;
+    use Illuminate\Support\Facades\Schema;
+
+    return new class extends Migration
+    {
+        /**
+        * Run the migrations.
+        */
+        public function up(): void
+        {
+            Schema::create('products', function (Blueprint $table) {
+                $table->id();
+                $table->string('product_name', 150);
+                $table->decimal('price', 10, 2);
+                $table->integer('stock');
+                $table->foreignId('category_id')->constrained()->onDelete('cascade');
+                $table->timestamps();
+            });
+        }
+
+        /**
+        * Reverse the migrations.
+        */
+        public function down(): void
+        {
+            Schema::dropIfExists('products');
+        }
+    };
+- this is from the blades or vews
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>My Inventory</title>
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    </head>
+    <body>
+        <h1>MyInventory</h1>
+        <nav>
+            <a href="{{ route('products.index') }}">Products</a>
+            <a href="{{ route('categories.index') }}">Categories</a>
+        </nav>
+        <hr>
+        @yield('content')
+    </body>
+    </html>
+
+
+
+class CategoryController extends Controller
+
 ## 🧰 Installation & Setup
 
 1. Clone the repository:
