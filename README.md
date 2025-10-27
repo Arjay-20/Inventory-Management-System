@@ -76,10 +76,11 @@ The system allows users to manage inventory records such as product name, quanti
 
 ## 🖼️ Screenshots / Code Snippets
 - this is from a controller
-    namespace App\Http\Controllers;
 
-    use App\Models\Category;
-    use Illuminate\Http\Request;
+    ```namespace App\Http\Controllers;
+
+        use App\Models\Category;
+        use Illuminate\Http\Request;
 - this is from the database
 
         ```<?php
