@@ -110,7 +110,7 @@ The system allows users to manage inventory records such as product name, quanti
                     }
                 };
 - this is from the blades or vews
-        '''<!DOCTYPE html>
+            '''<!DOCTYPE html>
             <html>
             <head>
                 <meta charset="utf-8">
