@@ -81,7 +81,7 @@ The system allows users to manage inventory records such as product name, quanti
     use App\Models\Category;
     use Illuminate\Http\Request;
 - this is from the database
-        '''<?php
+        ```<?php
                 use Illuminate\Database\Migrations\Migration;
                 use Illuminate\Database\Schema\Blueprint;
                 use Illuminate\Support\Facades\Schema;
@@ -110,7 +110,7 @@ The system allows users to manage inventory records such as product name, quanti
                     }
                 };
 - this is from the blades or vews
-            '''<!DOCTYPE html>
+            ```<!DOCTYPE html>
             <html>
             <head>
                 <meta charset="utf-8">
