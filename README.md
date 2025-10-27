@@ -82,51 +82,51 @@ The system allows users to manage inventory records such as product name, quanti
     use Illuminate\Http\Request;
 - this is from the database
         ---<?php
-                use Illuminate\Database\Migrations\Migration;
-                use Illuminate\Database\Schema\Blueprint;
-                use Illuminate\Support\Facades\Schema;
-                return new class extends Migration
-                {
-                    /**
-                    * Run the migrations.
-                    */
-                    public function up(): void
-                    {
-                        Schema::create('products', function (Blueprint $table) {
-                            $table->id();
-                            $table->string('product_name', 150);
-                            $table->decimal('price', 10, 2);
-                            $table->integer('stock');
-                            $table->foreignId('category_id')->constrained()->onDelete('cascade');
-                            $table->timestamps();
-                        });
-                    }
-                    /**
-                    * Reverse the migrations.
-                    */
-                    public function down(): void
-                    {
-                        Schema::dropIfExists('products');
-                    }
-                };
+        use Illuminate\Database\Migrations\Migration;
+        use Illuminate\Database\Schema\Blueprint;
+        use Illuminate\Support\Facades\Schema;
+        return new class extends Migration
+        {
+            /**
+            * Run the migrations.
+            */
+            public function up(): void
+            {
+                Schema::create('products', function (Blueprint $table) {
+                    $table->id();
+                    $table->string('product_name', 150);
+                    $table->decimal('price', 10, 2);
+                    $table->integer('stock');
+                    $table->foreignId('category_id')->constrained()->onDelete('cascade');
+                    $table->timestamps();
+                });
+            }
+            /**
+            * Reverse the migrations.
+            */
+            public function down(): void
+            {
+                Schema::dropIfExists('products');
+            }
+        };
 - this is from the blades or vews
             ---<!DOCTYPE html>
-                    <html>
-                    <head>
-                        <meta charset="utf-8">
-                        <title>My Inventory</title>
-                        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-                    </head>
-                    <body>
-                        <h1>MyInventory</h1>
-                        <nav>
-                            <a href="{{ route('products.index') }}">Products</a>
-                            <a href="{{ route('categories.index') }}">Categories</a>
-                        </nav>
-                        <hr>
-                        @yield('content')
-                    </body>
-                    </html>
+            <html>
+            <head>
+                <meta charset="utf-8">
+                <title>My Inventory</title>
+                <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+                </head>
+                <body>
+                <h1>MyInventory</h1>
+                    <nav>
+                        <a href="{{ route('products.index') }}">Products</a>
+                        <a href="{{ route('categories.index') }}">Categories</a>
+                    </nav>
+                    <hr>
+                    @yield('content')
+                </body>
+                </html>
 - this is from my routes
             ---<?php
 
